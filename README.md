@@ -29,4 +29,5 @@ To use HTML Squasher on single file HTML portals captured with the SingleFile ex
 
 I hope this helps! Let me know if you have any questions or need further assistance. PRs always welcome.
 
-![20221001_061501504_iOS](https://github.com/RocketGod-git/evilportal-htmlsquash/assets/57732082/84fd68fc-10d8-4e89-9d26-57c6f82656d7)
+![rocketgod_logo_transparent](https://github.com/RocketGod-git/evilportal-htmlsquash/assets/57732082/0331ca12-3dea-473b-a4ca-07d647020992)
+
