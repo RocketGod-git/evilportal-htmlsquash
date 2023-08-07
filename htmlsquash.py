@@ -105,9 +105,10 @@ def change_form_method(soup):
         forms = soup.find_all('form', method='POST')
         for form in forms:
             form['method'] = 'GET'
-        print("Successfully changed form methods from POST to GET")
+            form['action'] = "/get"  # set the action attribute to the desired URL
+        print("Successfully changed form methods from POST to GET and updated form action")
     except Exception as e:
-        print(f"Error changing form methods: {e}")
+        print(f"Error changing form methods or updating form action: {e}")
 
 def get_html_classes_ids(soup):
     try:
