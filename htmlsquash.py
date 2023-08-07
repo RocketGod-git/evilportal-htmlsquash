@@ -54,6 +54,9 @@ from bs4 import BeautifulSoup
 import cssutils
 import re
 from htmlmin import minify
+import logging
+
+cssutils.log.setLevel(logging.CRITICAL)
 
 STANDARD_FONTS = [
     "Arial, sans-serif",
@@ -69,7 +72,7 @@ STANDARD_FONTS = [
 
 def read_html(file_path):
     try:
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             print(f"Successfully opened file {file_path}")
             content = file.read()
             print(f"Successfully read file {file_path}")
@@ -81,7 +84,7 @@ def read_html(file_path):
 def write_html(file_path, html):
     try:
         os.makedirs(os.path.dirname(file_path), exist_ok=True)  # create directory if it does not exist
-        with open(file_path, 'w') as file:
+        with open(file_path, 'w', encoding='utf-8') as file:
             print(f"Successfully opened file {file_path} for writing")
             file.write(html)
             print(f"Successfully wrote to file {file_path}")
@@ -96,6 +99,15 @@ def parse_html(html):
     except Exception as e:
         print(f"Error parsing HTML: {e}")
         return None
+
+def change_form_method(soup):
+    try:
+        forms = soup.find_all('form', method='POST')
+        for form in forms:
+            form['method'] = 'GET'
+        print("Successfully changed form methods from POST to GET")
+    except Exception as e:
+        print(f"Error changing form methods: {e}")
 
 def get_html_classes_ids(soup):
     try:
@@ -206,6 +218,7 @@ if html is not None:
 
     print("Parsing HTML...")
     soup = parse_html(html)
+    change_form_method(soup)
 
     if soup is not None:
         print("Replacing base64 data...")
