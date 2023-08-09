@@ -4,7 +4,7 @@ HTML Squasher is an Evil Portal HTML squashing tool for the Flipper Zero WiFi De
 
 If the output file is still too large, you'll need to start deleting elements like footers, embedded SVG images, etc., using a tool like the Chrome Developer Console and then run this script again.
 
-Big thanks to [Evil Portal](https://github.com/bigbrodude6119/flipper-zero-evil-portal) for all their work. Bigbrodude6119 provides amazing instructions [here](LINK_TO_THE_INSTRUCTIONS).
+Big thanks to [Evil Portal](https://github.com/bigbrodude6119/flipper-zero-evil-portal) for all their work. Bigbrodude6119 provides amazing instructions here.
 
 ## How it works
 
