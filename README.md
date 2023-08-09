@@ -44,3 +44,8 @@ To use HTML Squasher on single file HTML portals captured with the SingleFile ex
 6. Then just run `python htmlsquash.py <filename>`
 
 Note: Don't be a dick. Please use these portals responsibly and not in real-world situations. This is intended for educational purposes only and DEFCON shenanigans.
+
+PRs always welcome.
+
+![rocketgod_logo_transparent](https://github.com/RocketGod-git/evilportal-htmlsquash/assets/57732082/0331ca12-3dea-473b-a4ca-07d647020992)
+
